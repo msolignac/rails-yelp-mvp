@@ -1,0 +1,10 @@
+  <h1>Restaurants</h1>
+
+    <%= link_to 'New Restaurant', new_restaurant_path(@restaurants), :class => "btn btn-success" %>
+    <% @restaurants.each do |restaurant| %>
+    <div class="card">
+      <h4 class="text-left"><%= link_to restaurant.name, restaurant_path(restaurant) %></h4>
+      <img src="https://picsum.photos/200/300/?random" alt="pics">
+      <p><%= restaurant.category %></p>
+    </div>
+    <% end %>
